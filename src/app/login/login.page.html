@@ -1,0 +1,67 @@
+
+    
+  
+<ion-content  color="secondary">
+  <div id="cabeçalho">
+    <ion-card-title><h1>Vamos começar</h1></ion-card-title>
+  </div>
+  <div id="voltar">
+  
+    <ion-router-link href="home">
+      <ion-button fill="clear"><ion-icon name="chevron-back-outline"></ion-icon>&nbsp;
+        </ion-button>
+  </ion-router-link>
+    </div>
+  <div id="login1">
+  <form #form="ngForm" (ngSubmit)="login(form)">
+    <ion-grid>
+      <ion-row  justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div text-center>
+          </div>
+          <div padding>
+            <ion-item>
+              <ion-input name="email" type="email" class="form-control" #email="ngModel"  clearInput placeholder="E-mail" ngModel required></ion-input>
+            <div *ngIf="email.invalid">
+
+            </div>
+            </ion-item>
+            <ion-item>
+              <ion-input name="password" type="password" clearInput placeholder="Senha" ngModel required></ion-input>
+            </ion-item>
+          </div>
+          <div padding>
+
+
+            <ion-router-link color="tertiary" href="vagas">
+              <ion-button size="block" type="submit" [disabled]="form.invalid" expand="block" (click)="Login">Entrar</ion-button>
+            </ion-router-link>
+
+            
+            
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</div>
+<div id="login2">
+<ion-row>
+  <div text-center>
+    Se você não tiver uma conta, por favor <a href="criarumaconta">
+      cadastre-se</a> primeiro!
+  </div>
+</ion-row>
+</div>
+
+<div id="esqueciasenha">
+
+  <ion-router-link color="primary" href="esqueciasenha">
+    <ion-button>esqueci a senha</ion-button>
+    </ion-router-link>
+
+
+</div>
+
+</ion-content>
+
